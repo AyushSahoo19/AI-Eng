@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Eng Knowledge Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --text-color: #ededed;
+            --accent-color: #6366f1;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-hover: rgba(255, 255, 255, 0.06);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin: 60px auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.05em;
+            background: linear-gradient(90deg, #fff, #a5a5a5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: #a1a1aa;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 30px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: var(--card-hover);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #a1a1aa;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .card .icon {
+            font-size: 1.5rem;
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 30px;
+            text-align: center;
+            color: #71717a;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--card-border);
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Knowledge Portal</h1>
+            <p class="subtitle">A centralized gateway to research, notes, and engineering disciplines across multiple domains.</p>
+        </header>
+
+        <div class="grid">
+            <a href="AI Research Eng/index.html" class="card">
+                <div class="icon">🧠</div>
+                <h2>AI Research Eng</h2>
+                <p>Advanced concepts, roadmaps, and explorations in artificial intelligence and machine learning.</p>
+            </a>
+            
+            <a href="Computer Science Eng/" class="card">
+                <div class="icon">💻</div>
+                <h2>Computer Science Eng</h2>
+                <p>Foundational computer science principles, algorithms, and systems architectures.</p>
+            </a>
+            
+            <a href="Math Eng/" class="card">
+                <div class="icon">📐</div>
+                <h2>Math Eng</h2>
+                <p>Mathematical modeling, theorems, and engineering applications.</p>
+            </a>
+            
+            <a href="Quant Eng/" class="card">
+                <div class="icon">📊</div>
+                <h2>Quant Eng</h2>
+                <p>Quantitative analysis, financial models, and specialized mathematics.</p>
+            </a>
+            
+            <a href="Software Eng/" class="card">
+                <div class="icon">⚙️</div>
+                <h2>Software Eng</h2>
+                <p>Software development methodologies, system design, and best practices.</p>
+            </a>
+            
+            <a href="Pysics Eng/" class="card">
+                <div class="icon">⚛️</div>
+                <h2>Physics Eng</h2>
+                <p>Physical laws, mechanics, and engineering dynamics.</p>
+            </a>
+            
+            <a href="Polymath Identity Article/" class="card">
+                <div class="icon">🌌</div>
+                <h2>Polymath Identity</h2>
+                <p>Articles and philosophical approaches connecting multiple disciplines.</p>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        © 2026 AI-Eng | Designed for clarity and performance
+    </footer>
+</body>
+</html>
