@@ -68,6 +68,9 @@ The project operates as a highly performant, static frontend system (HTML/CSS/JS
 
 *(Use this section to log major implementations, aesthetic overhauls, and significant structural changes going forward.)*
 
+- **[2026-03-28] — Cross-Navigation System**:
+  - **Phase Header Nav**: Implemented a global sub-navigation bar across all roadmap and curriculum pages (Strategy, Phase 1-3, AI Circular).
+  - **UI Consistency**: Standardized the top-level navigation layout to ensure users can jump between domains without returning to the main dashboard.
 - **[2026-03-28] — Repository Restructuring (Vercel Core Fix)**:
   - **Migration**: Moved `index.html`, `styles.css`, and `script.js` to the root directory to ensure automatic Vercel detection and rendering.
   - **Path Normalization**: Updated all sub-page links in `AI Research Eng/` to look up (`../`) for global assets.
